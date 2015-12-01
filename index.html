@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+	<meta charset="utf-8">
+	<title>Filtros personalizados</title>
+	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+</head>
+<body ng-controller="Ctrl">
+    <div class="container">
+    	<div class="row">
+    		<ul>
+              <li ng-repeat="pais in paises | filtroDate">Nombre: {{pais.nombre}}, Fecha : {{pais.date}} ==== dia anterior : {{pais.diaAnt}}</li>
+            </ul>
+    	</div>
+    </div>
+
+		
+       <!-- Cargamos angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+
+	<script src="app.js"></script>
+    
+</body>
+</html>
